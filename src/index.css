@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 :root {
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -31,12 +33,38 @@
 }
 
 @theme {  
-  /* Variables de Fuentes */
-  --font-kefa: "Kefa", "serif";
-  --font-sticky-notes: "Sticky Notes", "cursive";
-  --font-google-sans: "Google Sans", "sans-serif";
-  --font-poppins: "Poppins", "sans-serif";
+  /* Colores de la paleta de colores - primarios */
+  --color-onyx-0: #ffffff;
+  --color-onyx-50: #f6f6f6;
+  --color-onyx-100: #e7e7e7;
+  --color-onyx-200: #d1d1d1;
+  --color-onyx-300: #b0b0b0;
+  --color-onyx-400: #888888;
+  --color-onyx-500: #6d6d6d;
+  --color-onyx-600: #5d5d5d;
+  --color-onyx-700: #4f4f4f;
+  --color-onyx-800: #454545;
+  --color-onyx-900: #3d3d3d;
+  --color-onyx-950: #000000;
+  --color-onyx: #0f0f0f;
 
+  /* Colores Mine*/
+  --color-mine-shaft-50: #f6f6f6;
+  --color-mine-shaft-100: #e7e7e7;
+  --color-mine-shaft-200: #d1d1d1;
+  --color-mine-shaft-300: #b0b0b0;
+  --color-mine-shaft-400: #888888;
+  --color-mine-shaft-500: #6d6d6d;
+  --color-mine-shaft-600: #5d5d5d;
+  --color-mine-shaft-700: #4f4f4f;
+  --color-mine-shaft-800: #454545;
+  --color-mine-shaft-900: #3d3d3d;
+  --color-mine-shaft-950: #282828;
+
+  /* Colores de la paleta de colores - secundarios */
+  --color-error: #b3261e; /* hsl(4, 62%, 41%) */
+  --color-success: #1eb34a; /* hsl(135, 62%, 41%) */
+  
   /* Colores de la paleta de colores - primordiales del logo */
 
   /*Violeta*/
@@ -159,255 +187,763 @@
   --color-yellow-lemon-900: #724511;
   --color-yellow-lemon-950: #432405;
 
-  
-  /* Colores de la paleta de colores - secundarios */
-  --primary-color-error: #b3261e; /* hsl(4, 62%, 41%) */
-  --primary-color-success: #1eb34a; /* hsl(135, 62%, 41%) */
-
   /* Colores Primarios */  
-  --primary-color-charcoal: #36454F; /* hsl(200, 12%, 27%) */
-  --primary-color-light-gray: #D3D3D3; /* hsl(0, 0%, 83%) */
-  --primary-color-dark-gray: #4F4F4F; /* hsl(0, 0%, 31%) */
-  --primary-color-dark-green: #006400; /* hsl(120, 100%, 20%) */
-  --primary-color-dark-red: #8B0000; /* hsl(0, 100%, 27%) */
-  --primary-color-turquoise: #40E0D0; /* hsl(174, 72%, 56%) */
-  --primary-color-navy-blue: #000080; /* hsl(240, 100%, 25%) */
-  --primary-color-peach: #FFDAB9; /* hsl(28, 100%, 86%) */
-  --primary-color-dark-purple: #4B0082; /* hsl(275, 76%, 25%) */
-  --primary-color-gold: #FFD700; /* hsl(51, 100%, 50%) */
-  --primary-color-silver: #C0C0C0; /* hsl(0, 0%, 75%) */
+  --color-charcoal: #36454F; /* hsl(200, 12%, 27%) */
+  --color-light-gray: #D3D3D3; /* hsl(0, 0%, 83%) */
+  --color-dark-gray: #4F4F4F; /* hsl(0, 0%, 31%) */
+  --color-dark-green: #006400; /* hsl(120, 100%, 20%) */
+  --color-dark-red: #8B0000; /* hsl(0, 100%, 27%) */
+  --color-turquoise: #40E0D0; /* hsl(174, 72%, 56%) */
+  --color-navy-blue: #000080; /* hsl(240, 100%, 25%) */
+  --color-peach: #FFDAB9; /* hsl(28, 100%, 86%) */
+  --color-dark-purple: #4B0082; /* hsl(275, 76%, 25%) */
+  --color-gold: #FFD700; /* hsl(51, 100%, 50%) */
+  --color-silver: #C0C0C0; /* hsl(0, 0%, 75%) */
 
   /* Colores Oscuros */
-  --dark-color-yellow: #E5A700; /* hsl(47, 100%, 45%) */
-  --dark-color-orange: #D86B00; /* hsl(24, 100%, 42%) */
-  --dark-color-green: #5b8f8f; /* hsl(180, 33%, 38%) */
-  --dark-color-pink: #B24F7F; /* hsl(0, 50%, 45%) */
-  --dark-color-blue: #1f65b6; /* hsl(210, 70%, 37%) */
-  --dark-color-brown: #6f2f1f; /* hsl(10, 55%, 27%) */
-  --dark-color-violet: #5c1d98; /* hsl(270, 70%, 33%) */
+  --color-dark-yellow: #E5A700; /* hsl(47, 100%, 45%) */
+  --color-dark-orange: #D86B00; /* hsl(24, 100%, 42%) */
+  --color-dark-green: #5b8f8f; /* hsl(180, 33%, 38%) */
+  --color-dark-pink: #B24F7F; /* hsl(0, 50%, 45%) */
+  --color-dark-blue: #1f65b6; /* hsl(210, 70%, 37%) */
+  --color-dark-brown: #6f2f1f; /* hsl(10, 55%, 27%) */
+  --color-dark-violet: #5c1d98; /* hsl(270, 70%, 33%) */
 
   /* Colores sólidos */
-  --background-color-white: #F5F5F5;
-  --background-color-dark: #333333;
+  --color-background-white: #F5F5F5;
+  --color-background-dark: #333333;
 
   /* Colores del Texto */
-  --text-color-white: #F5F5F5;
-  --text-color-black: #000000;
-  --text-color-dark: #333333;
-  --text-input-field: #F7F7F7;
+  --color-white-text: #F5F5F5;
+  --color-black-text: #000000;
+  --color-dark-text: #333333;
+  --color-input-field: #F7F7F7;
 
-  --white: #FFFFFF;
-  --gray: #333333;
-  --black: #000000;
-  --dark: #232830;
+  --color-white: #FFFFFF;
+  --color-gray: #333333;
+  --color-black: #000000;
+  --color-dark: #232830;
+
+/* Variables de Fuentes */
+
+/* BBH Sans Bogle */
+--font-bbh-sans-bogle: "BBH-Sans-Bogle", "sans-serif";
+/* Bitcount Prop Single Ink */
+--font-bitcount-prop-single-ink: "Bitcount-Prop-Single-Ink", "sans-serif";
+
+/* Google Sans */
+--font-google-sans: "Google Sans", "sans-serif";
+--font-google-sans-thin: "Google Sans", "sans-serif";
+--font-google-sans-thin-italic: "Google Sans", "sans-serif";
+--font-google-sans-light: "Google Sans", "sans-serif";
+--font-google-sans-light-italic: "Google Sans", "sans-serif";
+--font-google-sans-regular: "Google Sans", "sans-serif";
+--font-google-sans-italic: "Google Sans", "sans-serif";
+--font-google-sans-medium: "Google Sans", "sans-serif";
+--font-google-sans-medium-italic: "Google Sans", "sans-serif";
+--font-google-sans-bold: "Google Sans", "sans-serif";
+--font-google-sans-bold-italic: "Google Sans", "sans-serif";
+--font-google-sans-black: "Google Sans", "sans-serif";
+--font-google-sans-black-italic: "Google Sans", "sans-serif";
+
+/* Kefa */
+--font-kefa: "Kefa", "serif";
+--font-kefa-bold: "Kefa", "serif";
+
+/* Ndot */
+--font-ndot: "Ndot", "sans-serif";
+--font-ndot-55: "Ndot", "sans-serif";
+--font-ndot-55caps: "Ndot Caps", "sans-serif";
+--font-ndot-57: "Ndot", "sans-serif";
+--font-ndot-77jp: "Ndot JP", "sans-serif";
+
+/* NType */
+--font-ntype: "NType", "sans-serif";
+--font-ntype-regular: "NType", "sans-serif";
+--font-ntype-headline: "NType", "sans-serif";
+--font-ntype-mono: "NType Mono", "monospace";
+
+/* Poppins */
+--font-poppins: "Poppins", "sans-serif";
+--font-poppins-thin: "Poppins", "sans-serif";
+--font-poppins-thin-italic: "Poppins", "sans-serif";
+--font-poppins-extralight: "Poppins", "sans-serif";
+--font-poppins-extralight-italic: "Poppins", "sans-serif";
+--font-poppins-light: "Poppins", "sans-serif";
+--font-poppins-light-italic: "Poppins", "sans-serif";
+--font-poppins-regular: "Poppins", "sans-serif";
+--font-poppins-italic: "Poppins", "sans-serif";
+--font-poppins-medium: "Poppins", "sans-serif";
+--font-poppins-medium-italic: "Poppins", "sans-serif";
+--font-poppins-semibold: "Poppins", "sans-serif";
+--font-poppins-semibold-italic: "Poppins", "sans-serif";
+--font-poppins-bold: "Poppins", "sans-serif";
+--font-poppins-bold-italic: "Poppins", "sans-serif";
+--font-poppins-extrabold: "Poppins", "sans-serif";
+--font-poppins-extrabold-italic: "Poppins", "sans-serif";
+--font-poppins-black: "Poppins", "sans-serif";
+--font-poppins-black-italic: "Poppins", "sans-serif";
+
+/* Sticky Notes */
+--font-sticky-notes: "Sticky Notes", "cursive";
+--font-sticky-notes-regular: "Sticky Notes", "cursive";
+
+/* Thunder */
+--font-thunder: "THUNDER", "sans-serif";
+--font-thunder-thin: "THUNDER", "sans-serif";
+--font-thunder-thin-italic: "THUNDER", "sans-serif";
+--font-thunder-extralight: "THUNDER", "sans-serif";
+--font-thunder-extralight-italic: "THUNDER", "sans-serif";
+--font-thunder-light: "THUNDER", "sans-serif";
+--font-thunder-light-italic: "THUNDER", "sans-serif";
+--font-thunder-regular: "THUNDER", "sans-serif";
+--font-thunder-italic: "THUNDER", "sans-serif";
+--font-thunder-medium: "THUNDER", "sans-serif";
+--font-thunder-medium-italic: "THUNDER", "sans-serif";
+--font-thunder-semibold: "THUNDER", "sans-serif";
+--font-thunder-semibold-italic: "THUNDER", "sans-serif";
+--font-thunder-bold: "THUNDER", "sans-serif";
+--font-thunder-bold-italic: "THUNDER", "sans-serif";
+--font-thunder-extrabold: "THUNDER", "sans-serif";
+--font-thunder-extrabold-italic: "THUNDER", "sans-serif";
+--font-thunder-black: "THUNDER", "sans-serif";
+--font-thunder-black-italic: "THUNDER", "sans-serif";
+
+/* THUNDER HC */
+--font-thunder-hc: "THUNDER HC", "sans-serif";
+--font-thunder-hc-thin: "THUNDER HC", "sans-serif";
+--font-thunder-hc-thin-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-extralight: "THUNDER HC", "sans-serif";
+--font-thunder-hc-extralight-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-light: "THUNDER HC", "sans-serif";
+--font-thunder-hc-light-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-regular: "THUNDER HC", "sans-serif";
+--font-thunder-hc-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-medium: "THUNDER HC", "sans-serif";
+--font-thunder-hc-medium-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-semibold: "THUNDER HC", "sans-serif";
+--font-thunder-hc-semibold-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-bold: "THUNDER HC", "sans-serif";
+--font-thunder-hc-bold-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-extrabold: "THUNDER HC", "sans-serif";
+--font-thunder-hc-extrabold-italic: "THUNDER HC", "sans-serif";
+--font-thunder-hc-black: "THUNDER HC", "sans-serif";
+--font-thunder-hc-black-italic: "THUNDER HC", "sans-serif";
+
 }
 
 @font-face {
-  font-family: Kefa;
-  src: url('/fonts/Kefa/kefa-bold.ttf');
+  font-family: 'BBH-Sans-Bogle';
+  src: url('/fonts/BBH-Sans-Bogle/BBHSansBogle-Regular.woff2') format('woff2');
   font-style: normal;
-}
-@font-face {
-  font-family: Kefa;
-  src: url('/fonts/Kefa/Kefa-Regular.TTF');
-  font-style: regular;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Sticky Notes;
-  src: url('/fonts/Sticky-Notes/Sticky\ Notes.ttf');
+  font-family: 'Bitcount-Prop-Single-Ink';
+  src: url('/fonts/Bitcount-Prop-Single-Ink/BitcountPropSingleInk-VariableFont.woff2') format('woff2');
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-BlackItalic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Black.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/Google-Sans/ProductSans-BlackItalic.woff2') format('woff2');
   font-style: italic;
-  font-weight: 900; /* Black Italic */
+  font-weight: 900;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Bold.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Bold.woff2') format('woff2');
   font-style: normal;
   font-weight: 700; /* Bold */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-BoldItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 700; /* Bold Italic */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Italic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Italic.woff2') format('woff2');
   font-style: italic;
   font-weight: 400; /* Italic */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Light.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Light.woff2') format('woff2');
   font-style: normal;
   font-weight: 300; /* Light */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-LightItalic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-LightItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 300; /* Light Italic */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Medium.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Medium.woff2') format('woff2');
   font-style: normal;
   font-weight: 500; /* Medium */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-MediumItalic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-MediumItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 500; /* Medium Italic */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Regular.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400; /* Regular */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-Thin.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-Thin.woff2') format('woff2');
   font-style: normal;
   font-weight: 100; /* Thin */
+  font-display: swap;
 }
 @font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/google-sans/ProductSans-ThinItalic.ttf') format('truetype');
+  src: url('/fonts/Google-Sans/ProductSans-ThinItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 100; /* Thin Italic */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kefa';
+  src: url('/fonts/Kefa/kefa-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kefa';
+  src: url('/fonts/Kefa/Kefa-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ndot';
+  src: url('/fonts/Ndot/Ndot55-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ndot Caps';
+  src: url('/fonts/Ndot/Ndot55Caps-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ndot';
+  src: url('/fonts/Ndot/Ndot57-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ndot JP';
+  src: url('/fonts/Ndot/Ndot77JPExtended.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NType';
+  src: url('/fonts/NType/NType82-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NType';
+  src: url('/fonts/NType/NType82-Headline.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NType Mono';
+  src: url('/fonts/NType/NType82Mono-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Thin.woff2') format('woff2');
   font-style: normal;
   font-weight: 100; /* Thin */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-ThinItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 100; /* Thin Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-ExtraLight.woff2') format('woff2');
   font-style: normal;
   font-weight: 200; /* ExtraLight */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-ExtraLightItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 200; /* ExtraLight Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Light.woff2') format('woff2');
   font-style: normal;
   font-weight: 300; /* Light */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-LightItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-LightItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 300; /* Light Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400; /* Regular */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Italic.woff2') format('woff2');
   font-style: italic;
   font-weight: 400; /* Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Medium.woff2') format('woff2');
   font-style: normal;
   font-weight: 500; /* Medium */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-MediumItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 500; /* Medium Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
   font-style: normal;
   font-weight: 600; /* SemiBold */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-SemiBoldItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 600; /* SemiBold Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Bold.woff2') format('woff2');
   font-style: normal;
   font-weight: 700; /* Bold */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-BoldItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 700; /* Bold Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-ExtraBold.woff2') format('woff2');
   font-style: normal;
   font-weight: 800; /* ExtraBold */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-ExtraBoldItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 800; /* ExtraBold Italic */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-Black.woff2') format('woff2');
   font-style: normal;
   font-weight: 900; /* Black */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+  src: url('/fonts/Poppins/Poppins-BlackItalic.woff2') format('woff2');
   font-style: italic;
   font-weight: 900; /* Black Italic */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sticky Notes';
+  src: url('/fonts/Sticky-Notes/Sticky\ Notes.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Thunder */
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ThinLC.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ThinLCItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ExtraLightLC.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ExtraLightLCItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-LightLC.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-LightLCItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-LC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-LCItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-MediumLC.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-MediumLCItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-SemiBoldLC.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-SemiBoldLCItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-BoldLC.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-BoldLCItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ExtraBoldLC.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-ExtraBoldLCItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-BlackLC.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER';
+  src: url('/fonts/THUNDER/Thunder-BlackLCItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Thunder HC (High Contrast) */
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ThinHC.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ThinHCItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ExtraLightHC.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ExtraLightHCItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-LightHC.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-LightHCItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-HC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-HCItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-MediumHC.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-MediumHCItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-SemiBoldHC.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-SemiBoldHCItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-BoldHC.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-BoldHCItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ExtraBoldHC.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-ExtraBoldHCItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-BlackHC.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THUNDER HC';
+  src: url('/fonts/THUNDER/Thunder-BlackHCItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }

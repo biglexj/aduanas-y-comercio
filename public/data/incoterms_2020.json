@@ -1,0 +1,278 @@
+{
+  "incoterms_2020": {
+    "version": "2020",
+    "descripcion": "Términos de comercio internacional que definen las responsabilidades del vendedor y comprador",
+    "categorias": {
+      "cualquier_transporte": {
+        "nombre": "Reglas para cualquier transporte",
+        "descripcion": "Aplicables a cualquier modo de transporte, incluido el multimodal",
+        "terminos": {
+          "EXW": {
+            "codigo": "EXW",
+            "nombre": "Ex Works",
+            "nombre_español": "En Fábrica",
+            "responsabilidad_vendedor": {
+              "costo": "minimo",
+              "riesgo": "minimo",
+              "descripcion": "El vendedor cumple su obligación de entrega cuando pone la mercancía a disposición del comprador en sus instalaciones"
+            },
+            "responsabilidad_comprador": {
+              "costo": "maximo",
+              "riesgo": "maximo",
+              "descripcion": "Asume todos los costos y riesgos desde la recogida en las instalaciones del vendedor"
+            },
+            "lugar_entrega": "Instalaciones del vendedor",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del comprador",
+            "tramites_exportacion": "A cargo del comprador",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "FCA": {
+            "codigo": "FCA",
+            "nombre": "Free Carrier",
+            "nombre_español": "Franco Transportista",
+            "responsabilidad_vendedor": {
+              "costo": "bajo",
+              "riesgo": "bajo",
+              "descripcion": "Entrega la mercancía al transportista designado por el comprador en el lugar convenido"
+            },
+            "responsabilidad_comprador": {
+              "costo": "alto",
+              "riesgo": "alto",
+              "descripcion": "Asume costos y riesgos desde que el transportista se hace cargo de la mercancía"
+            },
+            "lugar_entrega": "Lugar convenido en país del vendedor",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del comprador",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "CPT": {
+            "codigo": "CPT",
+            "nombre": "Carriage Paid To",
+            "nombre_español": "Transporte Pagado Hasta",
+            "responsabilidad_vendedor": {
+              "costo": "medio",
+              "riesgo": "bajo",
+              "descripcion": "Paga el transporte hasta el destino convenido, pero el riesgo se transfiere al entregar al transportista"
+            },
+            "responsabilidad_comprador": {
+              "costo": "medio",
+              "riesgo": "alto",
+              "descripcion": "Asume el riesgo desde que la mercancía se entrega al transportista"
+            },
+            "lugar_entrega": "Al transportista en origen",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "CIP": {
+            "codigo": "CIP",
+            "nombre": "Carriage and Insurance Paid To",
+            "nombre_español": "Transporte y Seguro Pagados Hasta",
+            "responsabilidad_vendedor": {
+              "costo": "medio_alto",
+              "riesgo": "bajo",
+              "descripcion": "Paga transporte y seguro hasta destino, pero riesgo se transfiere al entregar al transportista"
+            },
+            "responsabilidad_comprador": {
+              "costo": "bajo",
+              "riesgo": "alto",
+              "descripcion": "Recibe mercancía con seguro incluido pero asume riesgo de transporte"
+            },
+            "lugar_entrega": "Al transportista en origen",
+            "seguro": "A cargo del vendedor (cobertura mínima)",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "DAP": {
+            "codigo": "DAP",
+            "nombre": "Delivered At Place",
+            "nombre_español": "Entregada en Lugar",
+            "responsabilidad_vendedor": {
+              "costo": "alto",
+              "riesgo": "alto",
+              "descripcion": "Entrega la mercancía puesta a disposición en el lugar de destino convenido"
+            },
+            "responsabilidad_comprador": {
+              "costo": "bajo",
+              "riesgo": "bajo",
+              "descripcion": "Solo se encarga de la descarga y trámites de importación"
+            },
+            "lugar_entrega": "Lugar convenido en país de destino",
+            "seguro": "A cargo del comprador (recomendado vendedor)",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "DPU": {
+            "codigo": "DPU",
+            "nombre": "Delivered at Place Unloaded",
+            "nombre_español": "Entregada en Lugar Descargada",
+            "responsabilidad_vendedor": {
+              "costo": "alto",
+              "riesgo": "alto",
+              "descripcion": "Entrega la mercancía descargada en el lugar de destino convenido"
+            },
+            "responsabilidad_comprador": {
+              "costo": "bajo",
+              "riesgo": "bajo",
+              "descripcion": "Solo se encarga de los trámites de importación"
+            },
+            "lugar_entrega": "Lugar convenido en país de destino (descargada)",
+            "seguro": "A cargo del comprador (recomendado vendedor)",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "DDP": {
+            "codigo": "DDP",
+            "nombre": "Delivered Duty Paid",
+            "nombre_español": "Entregada Derechos Pagados",
+            "responsabilidad_vendedor": {
+              "costo": "maximo",
+              "riesgo": "alto",
+              "descripcion": "Máxima responsabilidad: entrega mercancía con todos los trámites y costos pagados"
+            },
+            "responsabilidad_comprador": {
+              "costo": "minimo",
+              "riesgo": "minimo",
+              "descripcion": "Solo debe recibir la mercancía en el lugar convenido"
+            },
+            "lugar_entrega": "Lugar convenido en país de destino",
+            "seguro": "A cargo del comprador (recomendado vendedor)",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del vendedor"
+          }
+        }
+      },
+      "transporte_maritimo": {
+        "nombre": "Reglas para el transporte marítimo",
+        "descripcion": "Aplicables únicamente al transporte marítimo y por vías navegables interiores",
+        "terminos": {
+          "CFR": {
+            "codigo": "CFR",
+            "nombre": "Cost and Freight",
+            "nombre_español": "Costo y Flete",
+            "responsabilidad_vendedor": {
+              "costo": "medio",
+              "riesgo": "bajo",
+              "descripcion": "Paga costos y flete hasta puerto destino, pero riesgo se transfiere al cruzar la borda del buque"
+            },
+            "responsabilidad_comprador": {
+              "costo": "medio",
+              "riesgo": "alto",
+              "descripcion": "Asume riesgo desde que mercancía cruza la borda del buque en puerto origen"
+            },
+            "lugar_entrega": "Puerto de embarque (cruzar borda del buque)",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "FOB": {
+            "codigo": "FOB",
+            "nombre": "Free On Board",
+            "nombre_español": "Franco a Bordo",
+            "responsabilidad_vendedor": {
+              "costo": "medio_bajo",
+              "riesgo": "bajo",
+              "descripcion": "Entrega cuando la mercancía cruza la borda del buque en puerto de embarque"
+            },
+            "responsabilidad_comprador": {
+              "costo": "medio_alto",
+              "riesgo": "alto",
+              "descripcion": "Asume todos los costos y riesgos desde que mercancía está a bordo"
+            },
+            "lugar_entrega": "Puerto de embarque (cruzar borda del buque)",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del comprador",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "FAS": {
+            "codigo": "FAS",
+            "nombre": "Free Alongside Ship",
+            "nombre_español": "Franco al Costado del Buque",
+            "responsabilidad_vendedor": {
+              "costo": "bajo",
+              "riesgo": "bajo",
+              "descripcion": "Entrega colocando mercancía al costado del buque en puerto de embarque"
+            },
+            "responsabilidad_comprador": {
+              "costo": "alto",
+              "riesgo": "alto",
+              "descripcion": "Asume costos de carga al buque, flete, seguro y demás hasta destino"
+            },
+            "lugar_entrega": "Al costado del buque en puerto de embarque",
+            "seguro": "A cargo del comprador",
+            "transporte_principal": "A cargo del comprador",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          },
+          "CIF": {
+            "codigo": "CIF",
+            "nombre": "Cost, Insurance and Freight",
+            "nombre_español": "Costo, Seguro y Flete",
+            "responsabilidad_vendedor": {
+              "costo": "medio_alto",
+              "riesgo": "bajo",
+              "descripcion": "Paga costo, seguro y flete hasta puerto destino, pero riesgo se transfiere en origen"
+            },
+            "responsabilidad_comprador": {
+              "costo": "bajo",
+              "riesgo": "alto",
+              "descripcion": "Recibe mercancía con seguro pero asume riesgo desde embarque"
+            },
+            "lugar_entrega": "Puerto de embarque (cruzar borda del buque)",
+            "seguro": "A cargo del vendedor (cobertura mínima) Intitute Cargo Clauses C",
+            "transporte_principal": "A cargo del vendedor",
+            "tramites_exportacion": "A cargo del vendedor",
+            "tramites_importacion": "A cargo del comprador"
+          }
+        }
+      }
+    },
+    "leyenda": {
+      "niveles_costo": {
+        "minimo": {"color": "#90EE90", "descripcion": "Costos mínimos"},
+        "bajo": {"color": "#FFFF99", "descripcion": "Costos bajos"},
+        "medio_bajo": {"color": "#FFD700", "descripcion": "Costos medio-bajos"},
+        "medio": {"color": "#FFA500", "descripcion": "Costos medios"},
+        "medio_alto": {"color": "#FF8C00", "descripcion": "Costos medio-altos"},
+        "alto": {"color": "#FF6347", "descripcion": "Costos altos"},
+        "maximo": {"color": "#FF4500", "descripcion": "Costos máximos"}
+      },
+      "niveles_riesgo": {
+        "minimo": {"color": "#90EE90", "descripcion": "Riesgo mínimo"},
+        "bajo": {"color": "#FFFF99", "descripcion": "Riesgo bajo"},
+        "medio": {"color": "#FFA500", "descripcion": "Riesgo medio"},
+        "alto": {"color": "#FF6347", "descripcion": "Riesgo alto"},
+        "maximo": {"color": "#FF4500", "descripcion": "Riesgo máximo"}
+      }
+    },
+    "proceso_exportacion": {
+      "etapas": [
+        "Embalaje",
+        "Carga",
+        "Transporte",
+        "Trámites de Exportación",
+        "Carga a bordo",
+        "Transporte Principal",
+        "Descarga del Buque",
+        "Trámites de Importación",
+        "Transporte al destino",
+        "Descarga en Destino"
+      ]
+    },
+    "consideraciones_generales": {
+      "seguro": "Aunque no sea obligatorio según el Incoterm, se recomienda contratar seguro",
+      "documentacion": "Cada parte debe proporcionar documentos necesarios según sus obligaciones",
+      "comunicacion": "Es fundamental especificar claramente el lugar exacto de entrega",
+      "actualizacion": "Los Incoterms 2020 reemplazaron a los Incoterms 2010"
+    }
+  }
+}
